@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClipCut.cz – Stříháme videa, co mají vibe</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Kvalitní střih videa za skvělé ceny. Easy Reel od 500 Kč, Pro Reel od 1000 Kč.">
+    <meta name="keywords" content="střih videa, video editing, Instagram Reels, YouTube video, střih videa Praha, video editor, střih reels">
+    <meta name="author" content="ClipCut.cz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://clipcut.cz/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clipcut.cz/">
+    <meta property="og:title" content="ClipCut.cz – Stříháme videa, co mají vibe">
+    <meta property="og:description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Kvalitní střih videa za skvělé ceny. Easy Reel od 500 Kč, Pro Reel od 1000 Kč.">
+    <meta property="og:image" content="https://clipcut.cz/honza.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="cs_CZ">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://clipcut.cz/">
+    <meta name="twitter:title" content="ClipCut.cz – Stříháme videa, co mají vibe">
+    <meta name="twitter:description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Kvalitní střih videa za skvělé ceny.">
+    <meta name="twitter:image" content="https://clipcut.cz/honza.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 
+                0 8px 32px 0 rgba(0, 0, 0, 0.37),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-strong {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.12) 100%);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 
+                0 8px 32px 0 rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+                inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-button {
+            background: linear-gradient(135deg, rgba(190, 242, 100, 0.15) 0%, rgba(163, 230, 53, 0.2) 100%);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1.5px solid rgba(190, 242, 100, 0.4);
+            box-shadow: 
+                0 8px 32px 0 rgba(190, 242, 100, 0.2),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+                0 0 20px rgba(190, 242, 100, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .glass-button:hover::before {
+            left: 100%;
+        }
+        
+        .glass-button:hover {
+            background: linear-gradient(135deg, rgba(190, 242, 100, 0.25) 0%, rgba(163, 230, 53, 0.3) 100%);
+            border-color: rgba(190, 242, 100, 0.6);
+            box-shadow: 
+                0 12px 40px 0 rgba(190, 242, 100, 0.3),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+                0 0 30px rgba(190, 242, 100, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .glass-border-accent {
+            border: 1.5px solid rgba(190, 242, 100, 0.5);
+            box-shadow: 
+                0 8px 32px 0 rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+                inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+                0 0 20px rgba(190, 242, 100, 0.2),
+                0 0 0 1px rgba(190, 242, 100, 0.3);
+        }
+        
+        .glass-photo {
+            border: 2.5px solid rgba(190, 242, 100, 0.5);
+            box-shadow: 
+                0 8px 32px 0 rgba(190, 242, 100, 0.25),
+                inset 0 0 20px rgba(190, 242, 100, 0.15),
+                0 0 30px rgba(190, 242, 100, 0.1),
+                0 0 0 2px rgba(190, 242, 100, 0.2);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .glass-photo:hover {
+            border-color: rgba(190, 242, 100, 0.7);
+            box-shadow: 
+                0 12px 40px 0 rgba(190, 242, 100, 0.35),
+                inset 0 0 25px rgba(190, 242, 100, 0.2),
+                0 0 40px rgba(190, 242, 100, 0.15),
+                0 0 0 3px rgba(190, 242, 100, 0.3);
+            transform: scale(1.02);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #bef264 0%, #a3e635 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 
+                0 12px 40px 0 rgba(190, 242, 100, 0.25),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+                inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+                0 0 30px rgba(190, 242, 100, 0.2);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-icon {
+            background: linear-gradient(135deg, rgba(190, 242, 100, 0.1) 0%, rgba(190, 242, 100, 0.2) 100%);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            border: 1px solid rgba(190, 242, 100, 0.3);
+            box-shadow: 
+                0 4px 16px 0 rgba(190, 242, 100, 0.15),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-icon:hover {
+            background: linear-gradient(135deg, rgba(190, 242, 100, 0.2) 0%, rgba(190, 242, 100, 0.3) 100%);
+            border-color: rgba(190, 242, 100, 0.5);
+            box-shadow: 
+                0 6px 24px 0 rgba(190, 242, 100, 0.25),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+                0 0 20px rgba(190, 242, 100, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .glass-video {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.12) 100%);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 
+                0 8px 32px 0 rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+                inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .glass-video:hover {
+            box-shadow: 
+                0 12px 40px 0 rgba(190, 242, 100, 0.25),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+                inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+                0 0 30px rgba(190, 242, 100, 0.2);
+            transform: translateY(-4px);
+            border-color: rgba(190, 242, 100, 0.4);
+        }
+        
+        .glass-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-[#05070a] text-white min-h-screen">
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-[#bef264] opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#bef264] opacity-5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span class="gradient-text">ClipCut.cz</span>
+                <br>
+                <span class="text-white">Stříháme videa, co mají vibe.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Jsme <span class="text-[#bef264] font-semibold">Honza a Kryštof</span>. Nejsme žádná korporátní agentura, ale dva kámoši ze střední, co tě zbaví nudného stříhání. Kvalitně, levně a v klidu.
+            </p>
+            
+            <a href="#kontakt" class="inline-block px-8 py-4 glass-button text-[#bef264] font-semibold rounded-xl transition-all duration-300 text-lg">
+                Napiš nám na WhatsApp/Email
+            </a>
+        </div>
+    </section>
+    
+    <!-- Ceník Section -->
+    <section id="cenik" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
+                <span class="gradient-text">Ceník</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Karta 1: Easy Reel -->
+                <div class="glass-strong rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2 text-[#bef264]">Easy Reel</h3>
+                        <p class="text-3xl font-bold">500 Kč</p>
+                        <p class="text-sm text-gray-500 mt-1">za jeden reel</p>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Máš materiál i časy stříhání? My to jen sestříháme, hodíme do barvy a přidáme titulky - CZ/EN.
+                    </p>
+                </div>
+                
+                <!-- Karta 2: Pro Reel -->
+                <div class="glass-strong glass-border-accent rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2 text-[#bef264]">Pro Reel</h3>
+                        <p class="text-3xl font-bold">1000 Kč</p>
+                        <p class="text-sm text-gray-500 mt-1">za jeden reel</p>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Pošli nám původní videao, my z něj sami vybereme ta nejlepší místa a uděláme z toho banger.
+                    </p>
+                </div>
+                
+                <!-- Karta 3: YouTube Video -->
+                <div class="glass-strong rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2 text-[#bef264]">YouTube Video</h3>
+                        <p class="text-3xl font-bold">od 1000 Kč</p>
+                        <p class="text-lg text-gray-400">do 3000 Kč</p>
+                        <p class="text-sm text-gray-500 mt-1">za jedno nastříhané video</p>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Tohle bude více práce. Domluvíme se podle délky a náročnosti.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-400 text-lg">
+                    Nenašel jsi variantu pro sebe? <a href="#kontakt" class="text-[#bef264] hover:text-[#a3e635] transition-colors font-semibold underline decoration-2 underline-offset-2">Ozvi se nám</a> a domluvíme se.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- O nás Section -->
+    <section id="o-nas" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-strong rounded-2xl p-8 md:p-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">
+                    <span class="gradient-text">Kdo jsme?</span>
+                </h2>
+                
+                <!-- Fotky -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center mb-8">
+                    <div class="flex flex-col items-center">
+                        <img src="honza.jpg" alt="Honza" class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover glass-photo">
+                        <p class="text-[#bef264] font-semibold mt-3 text-lg">Honza</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="krystof.jpg" alt="Kryštof" class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover glass-photo">
+                        <p class="text-[#bef264] font-semibold mt-3 text-lg">Kryštof</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed text-center max-w-2xl mx-auto">
+                    <span class="text-[#bef264] font-semibold">Honza a Kryštof</span>. Baví nás video, sledujeme trendy a chceme dělat věci, co vypadají dobře. Jelikož jsme ve škole, neslibujeme střih do hodiny, ale o to víc si s tím vyhrajeme.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
+                <span class="gradient-text">Kontakt</span>
+            </h2>
+            
+            <div class="glass-strong rounded-2xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-center">
+                    <!-- Telefon -->
+                    <a href="tel:608395674" class="flex items-center gap-4 group">
+                        <div class="glass-icon rounded-full p-4 transition-all duration-300">
+                            <i data-lucide="phone" class="w-6 h-6 text-[#bef264]"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Telefon</p>
+                            <p class="text-xl font-semibold text-white group-hover:text-[#bef264] transition-colors">608 395 674</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Email -->
+                    <a href="mailto:janmichalekpraha@gmail.com" class="flex items-center gap-4 group">
+                        <div class="glass-icon rounded-full p-4 transition-all duration-300">
+                            <i data-lucide="mail" class="w-6 h-6 text-[#bef264]"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Email</p>
+                            <p class="text-xl font-semibold text-white group-hover:text-[#bef264] transition-colors break-all">janmichalekpraha@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
+                <span class="gradient-text">Ukázky našich prací</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Video 1 -->
+                <div class="glass-video rounded-2xl aspect-[9/16] overflow-hidden">
+                    <video 
+                        src="ukazka-1.mp4" 
+                        controls 
+                        muted 
+                        loop 
+                        playsinline
+                        preload="metadata"
+                        class="w-full h-full object-cover">
+                        Tvá prohlížeč nepodporuje přehrávání videí.
+                    </video>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="glass-video rounded-2xl aspect-[9/16] overflow-hidden">
+                    <video 
+                        src="ukazka-2.mp4" 
+                        controls 
+                        muted 
+                        loop 
+                        playsinline
+                        preload="metadata"
+                        class="w-full h-full object-cover">
+                        Tvá prohlížeč nepodporuje přehrávání videí.
+                    </video>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="glass-video rounded-2xl aspect-[9/16] overflow-hidden">
+                    <video 
+                        src="ukazka-3.mp4" 
+                        controls 
+                        muted 
+                        loop 
+                        playsinline
+                        preload="metadata"
+                        class="w-full h-full object-cover">
+                        Tvá prohlížeč nepodporuje přehrávání videí.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t border-white border-opacity-10">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400 text-sm">
+                © 2026 ClipCut.cz | Honza & Kryštof
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
