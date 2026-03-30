@@ -17,9 +17,8 @@
     <meta property="og:url" content="https://clipcut.cz/">
     <meta property="og:title" content="ClipCut.cz – Stříháme videa, co mají vibe">
     <meta property="og:description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Kvalitní střih videa za skvělé ceny. Easy Reel od 500 Kč, Pro Reel od 1000 Kč.">
-    <meta property="og:image" content="https://clipcut.cz/honza.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://clipcut.cz/clipcut-logo.jpg">
+    <meta property="og:image:alt" content="ClipCut.cz – logo">
     <meta property="og:locale" content="cs_CZ">
     
     <!-- Twitter -->
@@ -27,10 +26,11 @@
     <meta name="twitter:url" content="https://clipcut.cz/">
     <meta name="twitter:title" content="ClipCut.cz – Stříháme videa, co mají vibe">
     <meta name="twitter:description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Kvalitní střih videa za skvělé ceny.">
-    <meta name="twitter:image" content="https://clipcut.cz/honza.jpg">
+    <meta name="twitter:image" content="https://clipcut.cz/clipcut-logo.jpg">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Logo v záložce / na ploše (stejný soubor jako náhled při sdílení) -->
+    <link rel="icon" type="image/jpeg" href="clipcut-logo.jpg">
+    <link rel="apple-touch-icon" href="clipcut-logo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -203,21 +203,23 @@
         }
     </style>
 </head>
-<body class="bg-[#05070a] text-white min-h-screen">
-    
+<body class="bg-black text-white min-h-screen">
+    <!-- Zelené rozmazání přes celou stránku (fixed = nepřestane za prvním screenem) -->
+    <div class="fixed inset-0 pointer-events-none z-[1] overflow-hidden" aria-hidden="true">
+        <div class="absolute left-1/2 top-[32%] -translate-x-1/2 w-[min(130vw,72rem)] h-[min(90vh,44rem)] bg-[#bef264] opacity-[0.055] rounded-full blur-[100px]"></div>
+        <div class="absolute left-[5%] top-[55%] w-[min(85vw,36rem)] h-[min(70vw,28rem)] bg-[#bef264] opacity-[0.05] rounded-full blur-[90px]"></div>
+        <div class="absolute right-[3%] top-[70%] w-[min(95vw,40rem)] h-[min(75vw,30rem)] bg-[#bef264] opacity-[0.05] rounded-full blur-[90px]"></div>
+        <div class="absolute left-1/2 top-[92%] -translate-x-1/2 w-[min(150vw,85rem)] h-[min(110vh,48rem)] bg-[#bef264] opacity-[0.045] rounded-full blur-[110px]"></div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
-        <!-- Animated background elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-[#bef264] opacity-5 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#bef264] opacity-5 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div class="relative z-10 max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span class="gradient-text">ClipCut.cz</span>
-                <br>
-                <span class="text-white">Stříháme videa, co mají vibe.</span>
+    <section class="relative z-[2] min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="relative max-w-4xl mx-auto text-center">
+            <div class="mb-10 flex justify-center">
+                <img src="clipcut-logo.jpg" alt="ClipCut.cz" class="h-60 md:h-[21rem] w-auto max-w-[min(100%,min(90vw,48rem))] object-contain" decoding="async">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
+                Stříháme videa, co mají vibe.
             </h1>
             
             <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
