@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- YouTube embed vyžaduje odeslání Referer; bez toho může hráč hlásit Error 153 -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>ClipCut.cz – Stříháme videa, co mají vibe</title>
     
     <!-- SEO Meta Tags -->
@@ -233,7 +235,7 @@
     </section>
     
     <!-- Ceník Section -->
-    <section id="cenik" class="py-20 px-4">
+    <section id="cenik" class="relative z-[2] py-20 px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
                 <span class="gradient-text">Ceník</span>
@@ -287,7 +289,7 @@
     </section>
     
     <!-- O nás Section -->
-    <section id="o-nas" class="py-20 px-4">
+    <section id="o-nas" class="relative z-[2] py-20 px-4">
         <div class="max-w-4xl mx-auto">
             <div class="glass-strong rounded-2xl p-8 md:p-12">
                 <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">
@@ -314,7 +316,7 @@
     </section>
     
     <!-- Kontakt Section -->
-    <section id="kontakt" class="py-20 px-4">
+    <section id="kontakt" class="relative z-[2] py-20 px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
                 <span class="gradient-text">Kontakt</span>
@@ -349,11 +351,14 @@
     </section>
     
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 px-4">
+    <section id="portfolio" class="relative z-[2] py-20 px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-6">
                 <span class="gradient-text">Ukázky našich prací</span>
             </h2>
+            <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
+                Kluci pracují pro <a href="https://pagespeed.one" class="text-[#bef264] hover:text-[#a3e635] transition-colors font-semibold underline decoration-2 underline-offset-2" target="_blank" rel="noopener noreferrer">PageSpeed.ONE</a> a stříhají podcast <a href="https://www.youtube.com/watch?v=YuI0_WScMSo" class="text-[#bef264] hover:text-[#a3e635] transition-colors font-semibold underline decoration-2 underline-offset-2" target="_blank" rel="noopener noreferrer">FrontKec</a>.
+            </p>
             
             <div class="grid md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Video 1 -->
@@ -387,7 +392,7 @@
                 <!-- Video 3 -->
                 <div class="glass-video rounded-2xl aspect-[9/16] overflow-hidden">
                     <video 
-                        src="ukazka-3.mp4" 
+                        src="frontkec-reel.mp4" 
                         controls 
                         muted 
                         loop 
@@ -398,11 +403,23 @@
                     </video>
                 </div>
             </div>
+            
+            <div class="mt-14 flex justify-center w-full">
+                <div class="relative w-full max-w-3xl aspect-video rounded-2xl overflow-hidden glass-video">
+                    <iframe
+                        id="frontkec-youtube"
+                        class="absolute inset-0 w-full h-full border-0"
+                        title="FrontKec"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="py-12 px-4 border-t border-white border-opacity-10">
+    <footer class="relative z-[2] py-12 px-4 border-t border-white border-opacity-10">
         <div class="max-w-6xl mx-auto text-center">
             <p class="text-gray-400 text-sm">
                 © 2026 ClipCut.cz | Honza & Kryštof
@@ -411,8 +428,18 @@
     </footer>
     
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
+        (function () {
+            var iframe = document.getElementById('frontkec-youtube');
+            if (!iframe) return;
+            var id = 'YuI0_WScMSo';
+            var base = 'https://www.youtube-nocookie.com/embed/' + id;
+            var params = new URLSearchParams({ rel: '0', modestbranding: '1', playsinline: '1' });
+            if (location.protocol === 'http:' || location.protocol === 'https:') {
+                params.set('origin', location.origin);
+            }
+            iframe.src = base + '?' + params.toString();
+        })();
     </script>
 </body>
 </html>
