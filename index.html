@@ -8,7 +8,7 @@
     <title>ClipCut.cz – Stříháme videa, co mají vibe</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Kvalitní střih videa za skvělé ceny. Easy Reel od 500 Kč, Pro Reel od 1000 Kč.">
+    <meta name="description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Orientační ceny: Easy Reel od 750 Kč, Pro Reel od 1500 Kč s DPH — přesná cena po konzultaci.">
     <meta name="keywords" content="střih videa, video editing, Instagram Reels, YouTube video, střih videa Praha, video editor, střih reels">
     <meta name="author" content="ClipCut.cz">
     <meta name="robots" content="index, follow">
@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://clipcut.cz/">
     <meta property="og:title" content="ClipCut.cz – Stříháme videa, co mají vibe">
-    <meta property="og:description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Kvalitní střih videa za skvělé ceny. Easy Reel od 500 Kč, Pro Reel od 1000 Kč.">
+    <meta property="og:description" content="Honza a Kryštof stříhají videa pro Instagram Reels a YouTube. Orientační ceny: Easy Reel od 750 Kč, Pro Reel od 1500 Kč s DPH — přesná cena po konzultaci.">
     <meta property="og:image" content="https://clipcut.cz/clipcut-logo.jpg">
     <meta property="og:image:alt" content="ClipCut.cz – logo">
     <meta property="og:locale" content="cs_CZ">
@@ -206,19 +206,21 @@
     </style>
 </head>
 <body class="bg-black text-white min-h-screen">
-    <!-- Zelené rozmazání přes celou stránku (fixed = nepřestane za prvním screenem) -->
+    <!-- Zelené rozmazání: žádné nahoře u loga, začíná až níž na stránce -->
     <div class="fixed inset-0 pointer-events-none z-[1] overflow-hidden" aria-hidden="true">
-        <div class="absolute left-1/2 top-[32%] -translate-x-1/2 w-[min(130vw,72rem)] h-[min(90vh,44rem)] bg-[#bef264] opacity-[0.055] rounded-full blur-[100px]"></div>
-        <div class="absolute left-[5%] top-[55%] w-[min(85vw,36rem)] h-[min(70vw,28rem)] bg-[#bef264] opacity-[0.05] rounded-full blur-[90px]"></div>
-        <div class="absolute right-[3%] top-[70%] w-[min(95vw,40rem)] h-[min(75vw,30rem)] bg-[#bef264] opacity-[0.05] rounded-full blur-[90px]"></div>
-        <div class="absolute left-1/2 top-[92%] -translate-x-1/2 w-[min(150vw,85rem)] h-[min(110vh,48rem)] bg-[#bef264] opacity-[0.045] rounded-full blur-[110px]"></div>
+        <div class="absolute left-1/2 top-[52vh] -translate-x-1/2 w-[min(130vw,72rem)] h-[min(90vh,44rem)] bg-[#bef264] opacity-[0.055] rounded-full blur-[100px]"></div>
+        <div class="absolute left-[5%] top-[62vh] w-[min(85vw,36rem)] h-[min(70vw,28rem)] bg-[#bef264] opacity-[0.05] rounded-full blur-[90px]"></div>
+        <div class="absolute right-[3%] top-[76vh] w-[min(95vw,40rem)] h-[min(75vw,30rem)] bg-[#bef264] opacity-[0.05] rounded-full blur-[90px]"></div>
+        <div class="absolute left-1/2 top-[95vh] -translate-x-1/2 w-[min(150vw,85rem)] h-[min(110vh,48rem)] bg-[#bef264] opacity-[0.045] rounded-full blur-[110px]"></div>
     </div>
 
     <!-- Hero Section -->
     <section class="relative z-[2] min-h-screen flex items-center justify-center px-4 py-20">
-        <div class="relative max-w-4xl mx-auto text-center">
+        <!-- Čistá čerň přes glow jen v horní části hero = žádný „rámeček“ kolem JPG loga -->
+        <div class="absolute inset-x-0 top-0 h-[clamp(16rem,42vh,30rem)] bg-black pointer-events-none z-[1]" aria-hidden="true"></div>
+        <div class="relative z-[2] max-w-4xl mx-auto text-center">
             <div class="mb-10 flex justify-center">
-                <img src="clipcut-logo.jpg" alt="ClipCut.cz" class="h-60 md:h-[21rem] w-auto max-w-[min(100%,min(90vw,48rem))] object-contain" decoding="async">
+                <img src="clipcut-logo.jpg" alt="ClipCut.cz" class="relative z-[1] block h-60 md:h-[21rem] w-auto max-w-[min(100%,min(90vw,48rem))] object-contain bg-black" decoding="async">
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
                 Stříháme videa, co mají vibe.
@@ -246,7 +248,7 @@
                 <div class="glass-strong rounded-2xl p-8 hover-glow transition-all duration-300">
                     <div class="mb-6">
                         <h3 class="text-2xl font-bold mb-2 text-[#bef264]">Easy Reel</h3>
-                        <p class="text-3xl font-bold">500 Kč</p>
+                        <p class="text-3xl font-bold">750 Kč</p>
                         <p class="text-sm text-gray-500 mt-1">za jeden reel</p>
                     </div>
                     <p class="text-gray-300 leading-relaxed">
@@ -258,8 +260,8 @@
                 <div class="glass-strong glass-border-accent rounded-2xl p-8 hover-glow transition-all duration-300">
                     <div class="mb-6">
                         <h3 class="text-2xl font-bold mb-2 text-[#bef264]">Pro Reel</h3>
-                        <p class="text-3xl font-bold">1000 Kč</p>
-                        <p class="text-sm text-gray-500 mt-1">za jeden reel</p>
+                        <p class="text-3xl font-bold">1500 Kč</p>
+                        <p class="text-sm text-gray-500 mt-1">za jeden reel, s DPH</p>
                     </div>
                     <p class="text-gray-300 leading-relaxed">
                         Pošli nám původní videao, my z něj sami vybereme ta nejlepší místa a uděláme z toho banger.
@@ -280,7 +282,10 @@
                 </div>
             </div>
             
-            <div class="mt-12 text-center">
+            <div class="mt-12 text-center space-y-6 max-w-2xl mx-auto">
+                <p class="text-gray-300 text-base leading-relaxed">
+                    Ceny jsou pouze orientační — přesná cena vždy závisí na domluvě po konzultaci.
+                </p>
                 <p class="text-gray-400 text-lg">
                     Nenašel jsi variantu pro sebe? <a href="#kontakt" class="text-[#bef264] hover:text-[#a3e635] transition-colors font-semibold underline decoration-2 underline-offset-2">Ozvi se nám</a> a domluvíme se.
                 </p>
@@ -357,7 +362,7 @@
                 <span class="gradient-text">Ukázky našich prací</span>
             </h2>
             <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
-                Kluci pracují pro <a href="https://pagespeed.one" class="text-[#bef264] hover:text-[#a3e635] transition-colors font-semibold underline decoration-2 underline-offset-2" target="_blank" rel="noopener noreferrer">PageSpeed.ONE</a> a stříhají podcast <a href="https://www.youtube.com/watch?v=YuI0_WScMSo" class="text-[#bef264] hover:text-[#a3e635] transition-colors font-semibold underline decoration-2 underline-offset-2" target="_blank" rel="noopener noreferrer">FrontKec</a>.
+                Pracujeme pro <a href="https://pagespeed.one" class="text-[#bef264] hover:text-[#a3e635] transition-colors font-semibold underline decoration-2 underline-offset-2" target="_blank" rel="noopener noreferrer">PageSpeed.ONE</a> a stříháme podcast <a href="https://www.youtube.com/watch?v=YuI0_WScMSo" class="text-[#bef264] hover:text-[#a3e635] transition-colors font-semibold underline decoration-2 underline-offset-2" target="_blank" rel="noopener noreferrer">FrontKec</a>.
             </p>
             
             <div class="grid md:grid-cols-3 gap-6 md:gap-8">
