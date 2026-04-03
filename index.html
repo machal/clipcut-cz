@@ -46,6 +46,17 @@
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Outfit', sans-serif;
         }
+
+        .font-outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .footer-meta {
+            font-size: 0.6875rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(156, 163, 175, 0.85);
+        }
         
         .glass {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
@@ -203,6 +214,26 @@
             object-fit: cover;
             display: block;
         }
+
+        /* Hero: fluidní typografie, čitelná míra řádku pod nadpisem */
+        .hero-headline {
+            font-size: clamp(1.875rem, 4.2vw + 1rem, 4.25rem);
+            line-height: 1.12;
+            letter-spacing: -0.025em;
+            font-feature-settings: "kern" 1, "liga" 1;
+        }
+
+        .hero-lead {
+            max-width: min(36rem, 90vw);
+            font-size: clamp(1rem, 0.35vw + 0.92rem, 1.25rem);
+            line-height: 1.62;
+        }
+
+        @media (min-width: 768px) {
+            .hero-lead {
+                font-size: clamp(1.125rem, 0.5vw + 1rem, 1.375rem);
+            }
+        }
     </style>
 </head>
 <body class="bg-black text-white min-h-screen">
@@ -222,11 +253,11 @@
             <div class="mb-10 flex justify-center">
                 <img src="clipcut-logo.jpg" alt="ClipCut.cz" class="relative z-[1] block h-60 md:h-[21rem] w-auto max-w-[min(100%,min(90vw,48rem))] object-contain bg-black" decoding="async">
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
-                Stříháme videa, co mají vibe.
+            <h1 class="hero-headline text-balance font-bold mb-5 sm:mb-6 text-white">
+                <span class="block sm:inline">Stříháme videa,</span><span class="hidden sm:inline"> </span><span class="block sm:inline">co mají <span class="text-[#bef264]">vibe</span>.</span>
             </h1>
             
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p class="hero-lead text-gray-300 mb-10 mx-auto">
                 Jsme <span class="text-[#bef264] font-semibold">Honza a Kryštof</span>. Nejsme žádná korporátní agentura, ale dva kámoši ze střední, co tě zbaví nudného stříhání. Kvalitně, levně a v klidu.
             </p>
             
@@ -424,11 +455,29 @@
     </section>
     
     <!-- Footer -->
-    <footer class="relative z-[2] py-12 px-4 border-t border-white border-opacity-10">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-gray-400 text-sm">
-                © 2026 ClipCut.cz | Honza & Kryštof
+    <footer class="relative z-[2] border-t border-white border-opacity-10 px-4 pt-14 pb-16 md:pt-16 md:pb-20" lang="cs">
+        <div class="max-w-6xl mx-auto text-center space-y-5">
+            <p class="font-outfit text-xl md:text-2xl font-semibold text-white tracking-tight">
+                ClipCut
             </p>
+            <p class="text-sm md:text-[0.9375rem] text-gray-400 max-w-md mx-auto leading-relaxed text-pretty">
+                Střih reels a videí pro tvůj obsah — bez korporátu, <span class="whitespace-nowrap">ve dvou lidech.</span>
+            </p>
+            <nav class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-gray-500" aria-label="Rychlé odkazy v patičce">
+                <a href="#cenik" class="hover:text-[#bef264] transition-colors">Ceník</a>
+                <span class="text-gray-600 select-none" aria-hidden="true">·</span>
+                <a href="#o-nas" class="hover:text-[#bef264] transition-colors">O nás</a>
+                <span class="text-gray-600 select-none" aria-hidden="true">·</span>
+                <a href="#kontakt" class="hover:text-[#bef264] transition-colors">Kontakt</a>
+                <span class="text-gray-600 select-none" aria-hidden="true">·</span>
+                <a href="#portfolio" class="hover:text-[#bef264] transition-colors">Ukázky</a>
+            </nav>
+            <div class="pt-2 space-y-2 border-t border-white border-opacity-[0.06] max-w-md mx-auto">
+                <p class="footer-meta">© 2026 ClipCut.cz</p>
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Honza a Kryštof
+                </p>
+            </div>
         </div>
     </footer>
     
